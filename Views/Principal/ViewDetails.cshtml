@@ -1,0 +1,64 @@
+﻿@model SchoolManagementSystem.Models.Principal
+
+<h3>
+    <p style="text-align:left; color:blue">
+        <span style="float:right; color:blue">
+            <a href="/Home/Index">Sign out</a>
+        </span>
+    </p>
+</h3>
+<h3>Personal Information</h3>
+<html>
+<head>
+    <title><h1></h1></title>
+    <br />
+    <table class="table">
+        <tr>
+            <th>Type</th>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td>Id  </td>
+            <td>@Model.Id</td>
+        </tr>
+        <tr>
+            <td>Name </td>
+            <td>@Model.Name</td>
+        </tr>
+        <tr>
+            <td>Dob </td>
+            <td>@Model.Dob</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>@Model.Gender</td>
+        </tr>
+        <tr>
+            <td>Designation</td>
+            <td>@Model.Designation</td>
+        </tr>
+        <tr>
+            <td>Address </td>
+            <td>@Model.Address</td>
+        </tr>
+        <tr>
+            <td>Contact </td>
+            <td>@Model.Contact</td>
+        </tr>
+        <tr>
+            <td>Mail </td>
+            <td>@Model.MailId</td>
+        </tr>
+
+
+    </table>
+    <br />
+    <br />
+    <p style="color:blue">
+        <a href="/Principal/Home">Back</a>
+    </p>
+</head>
+<body>
+</body>
+</html>
+

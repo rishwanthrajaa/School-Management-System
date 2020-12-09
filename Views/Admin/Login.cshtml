@@ -1,0 +1,50 @@
+﻿
+@model SchoolManagementSystem.Models.Admin
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <hr>
+    <h2>Admin Login</h2><br />
+    <form method="post" action="/Admin/Login" class="form-group">
+        <div class="form-group">
+            @Html.LabelFor(m => m.Username)
+            @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+            <!--
+                 <label>Enter Username</label>
+              <input type="text" name="username" class="form-control" />
+                       @*@Html.ValidationMessageFor(m=> m.Username)*@
+            -->
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password)
+            @Html.TextBoxFor(m => m.Password, new { @class = "form-control" })
+            <!--
+              <label>Enter Password</label>
+              <input type="password" name="password" class="form-control" />
+            -->
+            @*@Html.ValidationMessageFor(m => m.Password)*@
+        </div>
+        <input type="submit" value="Sign in" class="btn btn-primary" />
+        <br />
+
+    </form>
+
+    <br />
+    @if (@ViewBag.Check != "")
+    {
+        <p style="color:red;"> @ViewBag.Check </p>
+    }
+    <p style="color:blue">
+        <a href="/Home/Index">Back</a>
+    </p>
+
+</body>
+</html>
+@*@section LoginValidation{
+        <script src="~/Scripts/jquery.validate.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    }*@

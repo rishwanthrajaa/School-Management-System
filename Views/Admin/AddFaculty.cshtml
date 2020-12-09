@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddFaculty</title>
+</head>
+<body>
+    <hr />
+    <h3>
+        <p style="text-align:left; color:blue">
+            <span style="float:right; color:blue">
+                <a href="/Home/Index">Sign out</a>
+            </span>
+        </p>
+    </h3>
+    <div class="form-group">
+        <h2><p>Enter Faculty Details</p></h2>
+    </div>
+    <br />
+    <form method="post" action="/Admin/AddFaculty" class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-sm-4">First Name</label>
+            <input type="text" name="firstName" class="form-control col-sm-4" />
+            @if (ViewBag.firstName != "")
+            {
+                 <label class="control-label" style="color:red">&nbsp;&nbsp;@ViewBag.firstName</label>
+            }
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-4">Middle Name</label>
+            <input type="text" name="middleName" class="form-control col-sm-8" />
+            @if (ViewBag.middleName != "")
+            {
+                <label class="control-label" style="color:red">&nbsp;&nbsp;@ViewBag.middleName</label>
+            }
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-4">Last Name</label>
+            <input type="text" name="lastName" class="form-control col-sm-8" />
+            @if (ViewBag.lastName != "")
+            {
+                <label class="control-label" style="color:red">&nbsp;&nbsp;@ViewBag.lastName</label>
+            }
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-4">Dob (As dd/mm/yyy)</label>
+            <input type="text" name="dob" class="form-control col-sm-8" />
+            @if (ViewBag.dob != "")
+            {
+                <label class="control-label" style="color:red">&nbsp;&nbsp;@ViewBag.dob</label>
+            }
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-4">Gender</label>
+            <div class="col-sm-4">
+                <div class="radio">
+                    <input type="radio" name="gender" value="m" />Male
+                </div>
+                <div class="radio">
+                    <input type="radio" name="gender" value="f" />Female
+
+                </div>
+
+            </div>
+            <div class="col-sm-pull-4">
+                @if (ViewBag.gender != "")
+                {
+                    <label class="control-label" style="color:red">&nbsp;&nbsp;@ViewBag.gender</label>
+                }
+            </div>
+           
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-4">Address</label>
+            <textarea class="form-control col-sm-8" rows="3" cols="25" name="address"></textarea>
+            @if (ViewBag.address != "")
+            {
+                <label class="control-label" style="color:red">&nbsp;&nbsp;@ViewBag.address</label>
+            }
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-4">Contact (+91)</label>
+            <input type="text" name="contact" class="form-control col-sm-8" />
+            @if (ViewBag.contact != "")
+            {
+                <label class="control-label" style="color:red">&nbsp;&nbsp;@ViewBag.contact</label>
+            }
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit" class="btn btn-success col-sm-offset-4" />
+        </div>
+    </form>
+</body>
+</html>

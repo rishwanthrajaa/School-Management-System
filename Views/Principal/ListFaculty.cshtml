@@ -1,0 +1,63 @@
+﻿@using SchoolManagementSystem.Models;
+@model IEnumerable<Faculty>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ListFaculty</title>
+</head>
+
+<body>
+    <div>
+        <h3>
+            <p style="text-align:left; color:blue">
+                <span style="float:right; color:blue">
+                    <a href="/Home/Index">Sign out</a>
+                </span>
+            </p>
+        </h3>
+
+
+        <h2>List of Faculties</h2>
+        <br />
+        <table class="table">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Dob</th>
+                <th>Gender</th>
+                <th>Designation</th>
+                <th>Address</th>
+                <th>Contact</th>
+                <th>MailId</th>
+                <th>UserName</th>
+                <th>Password</th>
+            </tr>
+
+
+            @foreach (Faculty show in @Model)
+            {
+                <tr>
+                    <td>@show.Id</td>
+                    <td>@show.Name</td>
+                    <td>@show.Dob</td>
+                    <td>@show.Gender</td>
+                    <td>@show.Designation</td>
+                    <td>@show.Address</td>
+                    <td>@show.Contact</td>
+                    <td>@show.MailId</td>
+                    <td>@show.Username</td>
+                    <td>@show.Password</td>
+                </tr>
+            }
+        </table>
+        <p style="color:blue">
+            <a href="/Principal/Home">Back</a>
+        </p>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿@using SchoolManagementSystem.Models;
+@model Faculty
+@{
+    ViewBag.Title = "Home";
+}
+
+<html>
+<body>
+
+    <hr>
+    <h3>
+        <p style="text-align:left;">
+            Welcome @Model.Name ,
+            <span style="float:right;">
+                <a href="/Home/Index">Sign out</a>
+
+            </span>
+        </p>
+    </h3>
+    <br />
+    <div align="left">
+        <ul>
+            <li>
+                <a href="/Faculty/ViewDetails">To View Details</a><br /><br />
+            </li>
+
+            <li>
+                <a href="/Faculty/ChangePassword"> To Change Password </a><br /><br />
+
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
+
